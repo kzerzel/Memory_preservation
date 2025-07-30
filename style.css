@@ -207,3 +207,9 @@ footer {
 }
 /* smaller hero for subsidiary pages */
 .hero-small { height: 40vh; }
+/* Fine‑tune about‑page containers */
+.container p,
+.container ul,
+.container ol {
+  margin-bottom: 1rem;
+}
