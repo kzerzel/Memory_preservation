@@ -262,3 +262,29 @@ footer {
 }
 .btn:hover { opacity: .9; }
 .note { text-align: center; font-size: .9rem; color: #666; }
+/* ===  NEW SECTIONS  === */
+.features .card h3,
+.how-it-works h2,
+.testimonials h2 {
+  color:#0077c8;
+}
+
+.how-it-works ol {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+.how-it-works li { margin-bottom: .5rem; }
+
+.testimonials blockquote {
+  background:#f9f9f9;
+  border-left:4px solid #0077c8;
+  margin:1rem 0;
+  padding:1rem;
+}
+.testimonials span {
+  display:block;
+  margin-top:.4rem;
+  font-style:italic;
+  color:#555;
+}
+
