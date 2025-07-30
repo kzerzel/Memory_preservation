@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ===================================================
+   Global Reset & Base Typography
+   =================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,17 +14,51 @@ body {
   line-height: 1.6;
 }
 
-a {
-  color: #0077c8;
-  text-decoration: none;
+/* ===================================================
+   Links & Buttons
+   =================================================== */
+a { color: #0077c8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #0077c8;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+.btn:hover { background: #005a96; }
+
+/* ===================================================
+   Layout Helpers
+   =================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.grid-3 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  text-align: center;
+}
+
+/* ===================================================
+   Header & Navigation
+   =================================================== */
 header {
-  background-color: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
   top: 0;
@@ -33,9 +69,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 header h1 {
@@ -44,33 +78,19 @@ header h1 {
   color: #0077c8;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
+nav ul { list-style: none; display: flex; }
+nav li { margin-left: 1.5rem; }
+nav a { font-weight: 500; color: #333; transition: color .2s; }
+nav a:hover { color: #0077c8; }
 
-nav li {
-  margin-left: 1.5rem;
-}
-
-nav a {
-  font-weight: 500;
-  color: #333;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #0077c8;
-}
-
-/* Hero Section */
+/* ===================================================
+   Hero
+   =================================================== */
 .hero {
   position: relative;
   width: 100%;
   height: 60vh;
-  background-image: url('hero.png');
-  background-size: cover;
-  background-position: center;
+  background: url('hero.png') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,11 +101,8 @@ nav a:hover {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(0,0,0,.5);
 }
 
 .hero-content {
@@ -94,151 +111,59 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+.hero h2   { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p    { font-size: 1.2rem; margin-bottom: 1.5rem; }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #0077c8;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #005a96;
-}
-
-/* Section Layout */
-.section {
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: #0077c8;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.feature {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.feature h4 {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  color: #0077c8;
-}
-
-.feature p {
-  font-size: 0.95rem;
-}
-
-/* Use Cases Summary */
-.usecases {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.usecase {
-  background-color: #ffffff;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.usecase:hover {
-  transform: translateY(-4px);
-}
-
-.usecase h4 {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  color: #0077c8;
-}
-
-.usecase p {
-  font-size: 0.95rem;
-}
-
-/* Footer */
-footer {
-  background-color: #ffffff;
-  border-top: 1px solid #e5e5e5;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-}
-/* ---- How It Works ---- */
-.how-it-works h2,
-.testimonials h2,
-.pricing h2 {
+/* ===================================================
+   Core AI Features
+   =================================================== */
+#features h2,
+#how h2,
+#testimonials h2,
+#pricing h2 {
   text-align: center;
   margin: 3rem 0 1.5rem;
   font-size: 2rem;
   color: #0077c8;
 }
-.steps {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.step {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
-}
-.step h3 { margin-bottom: .5rem; font-size: 1.25rem; }
 
-/* ---- Testimonials ---- */
-.testimonials .testimonial {
-  background: #f9fafb;
+.card h3 { margin-bottom: 1rem; color: #0077c8; }
+
+/* ===================================================
+   How It Works
+   =================================================== */
+#how ol {
+  margin: 1rem 0 2rem;
+  padding-left: 1.2rem;
+}
+#how li { margin-bottom: .6rem; }
+
+/* ===================================================
+   Testimonials
+   =================================================== */
+#testimonials blockquote {
+  background: #f9f9f9;
   border-left: 4px solid #0077c8;
   margin: 1rem 0;
   padding: 1rem;
-  border-radius: 4px;
 }
-.testimonial span {
+#testimonials span {
   display: block;
-  margin-top: .5rem;
+  margin-top: .4rem;
   font-style: italic;
   color: #555;
 }
 
-/* ---- Pricing ---- */
+/* ===================================================
+   Pricing Table
+   =================================================== */
 .pricing-table {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin: 2rem 0;
 }
+
 .plan {
   background: #fff;
   padding: 1.5rem 1rem;
@@ -246,45 +171,31 @@ footer {
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
-.plan.popular {
-  border: 2px solid #0077c8;
-}
-.plan h3 { margin-bottom: .5rem; font-size: 1.4rem; }
-.price { font-size: 1.8rem; margin: .5rem 0 1rem; color: #0077c8; }
-.plan ul { list-style: none; margin-bottom: 1rem; }
-.plan li { margin: .4rem 0; }
-.btn {
-  display: inline-block;
-  background: #0077c8;
-  color: #fff;
-  padding: .6rem 1.2rem;
-  border-radius: 4px;
-}
-.btn:hover { opacity: .9; }
+.plan.popular { border: 2px solid #0077c8; }
+
+.plan h3   { margin-bottom: .5rem; font-size: 1.4rem; }
+.price     { font-size: 1.8rem; margin: .5rem 0 1rem; color: #0077c8; }
+.plan ul   { list-style: none; margin-bottom: 1rem; }
+.plan li   { margin: .4rem 0; }
+
 .note { text-align: center; font-size: .9rem; color: #666; }
-/* ===  NEW SECTIONS  === */
-.features .card h3,
-.how-it-works h2,
-.testimonials h2 {
-  color:#0077c8;
+
+/* ===================================================
+   Footer
+   =================================================== */
+footer {
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: .9rem;
+  color: #666;
 }
 
-.how-it-works ol {
-  margin: 1rem 0;
-  padding-left: 1.2rem;
+/* ===================================================
+   Responsive Tweaks
+   =================================================== */
+@media (max-width: 768px) {
+  .hero { height: 50vh; }
+  .hero h2 { font-size: 2rem; }
 }
-.how-it-works li { margin-bottom: .5rem; }
-
-.testimonials blockquote {
-  background:#f9f9f9;
-  border-left:4px solid #0077c8;
-  margin:1rem 0;
-  padding:1rem;
-}
-.testimonials span {
-  display:block;
-  margin-top:.4rem;
-  font-style:italic;
-  color:#555;
-}
-
