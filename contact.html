@@ -5,33 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact – Memory Preservation Project</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Get in touch with the Memory Preservation team – we welcome questions, partnership ideas and support inquiries.">
-<link rel="canonical" href="https://kzerzel.github.io/Memory_preservation/contact.html">
 
+  <meta name="description"
+        content="Get in touch with the Memory Preservation Project team – we’d love to hear your questions or partnership ideas." />
+  <link rel="canonical"
+        href="https://kzerzel.github.io/Memory_preservation/contact.html" />
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <h1>Memory Preservation Project</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="usecases.html">Use Cases</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="container">
+    <h1>Memory Preservation Project</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="usecases.html">Use Cases</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero hero-small" style="background-image:url('hero.png');">
+  <div class="hero-content">
+    <h2>Let’s Talk Memories</h2>
+    <p>Questions, partnership ideas, or just curious? Drop us a line.</p>
+  </div>
+</section>
+
+<!-- Contact block -->
+<section class="container contact-wrap">
+  <div class="contact-card">
+    <h3>Contact Details</h3>
+    <p><strong>Email:</strong> <a href="mailto:hello@memoryvault.ai">hello@memoryvault.ai</a></p>
+    <p><strong>Phone (EU):</strong> +30 210 123 4567</p>
+    <p><strong>Office:</strong> Koropi, Attica 19400, Greece<br>
+       (Visits by appointment only)</p>
+
+    <div class="social-row">
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="Twitter">X</a>
+      <a href="#" aria-label="YouTube">▶</a>
     </div>
-  </header>
+  </div>
 
-  <section class="contact-page">
-    <h2>Get in Touch</h2>
-    <p>Interested in the Memory Preservation Project? I’d love to hear from you.</p>
-    <p>
-      <a href="mailto:kzerzel@gmail.com">Email me →</a>
-    </p>
-  </section>
+  <div class="contact-card">
+    <h3>Quick Message</h3>
+    <!-- Mailto fallback form -->
+    <form action="mailto:hello@memoryvault.ai" method="post" enctype="text/plain">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required />
 
-  <footer>&copy; 2025 Memory Preservation Project. All rights reserved.</footer>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required />
+
+      <label for="msg">Message</label>
+      <textarea id="msg" name="Message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <small style="display:block;margin-top:.5rem;">
+      <em>Note:</em> This static form opens your email client.<br>
+      Prefer a hosted form? We support Netlify or Getform.
+    </small>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Memory Preservation Project. All rights reserved.</p>
+</footer>
 </body>
 </html>
