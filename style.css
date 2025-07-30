@@ -205,3 +205,5 @@ footer {
 @media (max-width:600px){
   .grid-3 { grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); }
 }
+/* smaller hero for subsidiary pages */
+.hero-small { height: 40vh; }
