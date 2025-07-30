@@ -221,3 +221,6 @@ footer {
 .grid-2           { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
 .card             { background:#fff; border-radius:6px; padding:1.25rem 1rem; text-align:center; box-shadow:0 2px 4px rgba(0,0,0,.06); }
 .card h4          { margin-bottom:.5rem; color:#0077c8; }
+/* Center the use‑cases heading and grid */
+#usecases h2 { text-align:center; }
+#usecases .grid-3 { justify-content:center; }
