@@ -101,25 +101,34 @@
   </div>
 
   <div class="contact-card">
-    <h3>Quick Message</h3>
-    <!-- Mailto fallback form -->
-    <form action="mailto:hello@memoryvault.ai" method="post" enctype="text/plain">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Name" required />
+<h3>Quick Message</h3>
+<form action="https://formspree.io/f/xjkoaekq" method="POST" class="contact-form">
+  <!-- spam honeypot -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" required />
+  <!-- optional subject line for the email you receive -->
+  <input type="hidden" name="_subject" value="New message from Memory Preservation Project">
 
-      <label for="msg">Message</label>
-      <textarea id="msg" name="Message" rows="4" required></textarea>
+  <!-- redirect to a thank-you page after success -->
+  <input type="hidden" name="_redirect" value="https://kzerzel.github.io/Memory_preservation/thankyou.html">
 
-      <button type="submit" class="btn">Send</button>
-    </form>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" autocomplete="name" required>
 
-    <small style="display:block;margin-top:.5rem;">
-      <em>Note:</em> This static form opens your email client.<br>
-      Prefer a hosted form? We support Netlify or Getform.
-    </small>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" autocomplete="email" required>
+
+  <label for="msg">Message</label>
+  <textarea id="msg" name="message" rows="4" required></textarea>
+
+  <label style="display:block; margin:.75rem 0;">
+    <input type="checkbox" name="consent" required>
+    I agree to the processing of my data for the purpose of responding to this message.
+  </label>
+
+  <button type="submit" class="btn">Send</button>
+</form>
+
   </div>
 </section>
 
@@ -128,7 +137,3 @@
 </footer>
 </body>
 </html>
-
-
-
-
