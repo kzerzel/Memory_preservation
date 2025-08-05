@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://https://kzerzel.github.io/Memory_preservation/sitemap.xml
