@@ -373,3 +373,36 @@ nav a.active {
   border-bottom: 2px solid #0077c8;
   padding-bottom: 2px;
 }
+/* ===== ALIGNMENT + EQUAL HEIGHTS (home) ===== */
+
+/* 1) Feature cards: left-align body text for readability */
+#features .card { text-align: left; }
+#features .card h3 { text-align: left; }
+
+/* 2) How-it-works steps: left-align text as well */
+#how .step-card { text-align: left; }
+
+/* 3) Make cards equal height so bottoms align */
+#features .grid-3 .card,
+#how .grid-4 .step-card,
+.pricing-table .plan,
+.link-cards .link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* keeps text left-aligned inside the flex */
+}
+
+/* 4) Give them a sensible minimum height on wider screens */
+@media (min-width: 768px) {
+  #features .grid-3 .card { min-height: 180px; }
+  #how .grid-4 .step-card { min-height: 150px; }
+  .link-cards .link-card { min-height: 120px; }
+}
+
+/* 5) Keep pricing buttons aligned to the bottom of each plan */
+.pricing-table .plan .btn { margin-top: auto; }
+
+/* 6) Read-More cards: small polish */
+.link-cards { align-items: stretch; }
+.link-cards .link-card h4 { margin-bottom: .35rem; }
+.link-cards .link-card p { margin: 0; }
