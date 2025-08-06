@@ -318,3 +318,36 @@ footer {
   .hero { height: 50vh; }
   .hero h2 { font-size: 2rem; }
 }
+/* Home: align "Read More" block with Pricing */
+section[aria-labelledby="home-read-more"]{
+  max-width: 1200px;     /* same as .container */
+  margin: 2rem auto;     /* center it */
+  padding: 0 1rem;       /* same side padding as .container */
+}
+
+/* exactly 3 equal columns on desktop so it spans the full container width */
+section[aria-labelledby="home-read-more"] .link-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* make each card fill its grid cell and align text nicely */
+section[aria-labelledby="home-read-more"] .link-cards .link-card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* responsive breakpoints */
+@media (max-width: 900px){
+  section[aria-labelledby="home-read-more"] .link-cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px){
+  section[aria-labelledby="home-read-more"] .link-cards{
+    grid-template-columns: 1fr;
+  }
+}
