@@ -315,3 +315,61 @@ footer {
   font-weight:bold;
 }
 .social-row a:hover { opacity:.8; }
+/* ===== Consistent callouts & link cards ===== */
+
+/* Subtle callout box (replaces inline <p class="note" ...>) */
+.callout {
+  background: #f3f7fb;
+  border: 1px solid #e1eef8;
+  border-left: 4px solid #0077c8;
+  border-radius: 6px;
+  padding: 1rem 1rem 1rem 1.25rem;
+  margin: 1.25rem 0;
+  color: #2a2a2a;
+}
+
+/* Inline "more" link with arrow */
+.more-link { font-weight: 600; }
+.more-link::after {
+  content: " →";
+  font-weight: 700;
+}
+
+/* Link cards grid (use for 'Read more' sections) */
+.link-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1.25rem 0 0;
+}
+.link-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #e7ebef;
+  border-radius: 8px;
+  padding: 1rem 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  border-color: #dbe8f2;
+}
+.link-card h4 {
+  margin-bottom: .35rem;
+  color: #0077c8;
+  font-size: 1.05rem;
+}
+.link-card p {
+  color: #555;
+  font-size: .95rem;
+  margin: 0;
+}
+
+/* Optional: active nav highlight (add class="active" on current page link) */
+nav a.active {
+  color: #0077c8;
+  border-bottom: 2px solid #0077c8;
+  padding-bottom: 2px;
+}
